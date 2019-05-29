@@ -2,10 +2,13 @@ package com.lobuz.game;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.springframework.boot.SpringApplication;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import com.lobuz.game.config.FxmlView;
+import com.lobuz.game.config.StageManager;
 
 @SpringBootApplication
 public class GameApplication extends Application {
@@ -30,8 +33,6 @@ public class GameApplication extends Application {
         stageManager = context.getBean(StageManager.class, primaryStage);
         stageManager.switchScene(FxmlView.LOGIN);
     }
-
-
 
     @Override
     public void stop() {

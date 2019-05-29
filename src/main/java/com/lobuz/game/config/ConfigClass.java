@@ -1,27 +1,22 @@
-package com.lobuz.game;
+package com.lobuz.game.config;
 
-import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.io.IOException;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
-import java.io.IOException;
-import java.util.ResourceBundle;
+import javafx.stage.Stage;
 
 @Configuration
 public class ConfigClass {
 
+    public ConfigClass(SpringFXMLLoader springFXMLLoader) {
+        this.springFXMLLoader = springFXMLLoader;
+    }
 
-    @Autowired
-    SpringFXMLLoader springFXMLLoader;
-//
-//    @Bean
-//    public ResourceBundle resourceBundle() {
-//        return ResourceBundle.getBundle("Bundle");
-//    }
-//
-//
+    private final SpringFXMLLoader springFXMLLoader;
+
     @Bean
     @Lazy
     public StageManager stageManager(Stage stage) throws IOException {

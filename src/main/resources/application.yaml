@@ -1,0 +1,5 @@
+game:
+  path:
+    firstScenePath:  /view/start/start.fxml
+    secondScenePath: /view/game/game.fxml
+    thirdScenePath: /view/finish/finish.fxml
