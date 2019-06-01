@@ -1,5 +1,6 @@
 package com.lobuz.game.controller.game;
 
+import com.lobuz.game.config.ApplicationProperties;
 import com.lobuz.game.config.FxmlView;
 import com.lobuz.game.config.StageManager;
 import com.lobuz.game.dto.entity.Points;
@@ -22,21 +23,22 @@ import java.util.ResourceBundle;
 @Controller
 public class GameController implements Initializable {
 
-    private final StageManager stageManager;
     private static int questionNumber = 0;
+    private final StageManager stageManager;
     private final QuestionService service;
     private final Points points;
-
+    private final ApplicationProperties properties;
 
     private final List<QuestionModel> questionList;
 
     public GameController(@Lazy StageManager stageManager, QuestionService service,
-                          List<QuestionModel> questionList, Points points) {
+                          List<QuestionModel> questionList, Points points,
+                          ApplicationProperties properties) {
         this.stageManager = stageManager;
         this.service = service;
         this.questionList = questionList;
         this.points = points;
-
+        this.properties = properties;
     }
 
     @FXML
@@ -56,11 +58,12 @@ public class GameController implements Initializable {
 
     @FXML
     public void next(ActionEvent event) {
-
-        if (questionNumber > 9) {
+        log.info("q: " + questionNumber);
+        if (questionNumber > 8) {
             nextStage();
+        } else {
+            setQuestion(++questionNumber);
         }
-        setQuestion(++questionNumber);
     }
 
 

@@ -4,9 +4,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lobuz.game.controller.finish.FinishController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="575.0" styleClass="finishBackground" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lobuz.game.controller.finish.FinishController">
    <children>
-      <Label layoutX="80.0" layoutY="114.0" prefHeight="55.0" prefWidth="429.0" text="kooooooniec" />
-      <Button fx:id="exit" layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#exitApp" text="Button" />
+      <Button fx:id="exit" layoutX="357.0" layoutY="280.0" mnemonicParsing="false" onAction="#exitApp" styleClass="Button" text="Button" />
+      <Button fx:id="exit" layoutX="80.0" layoutY="280.0" mnemonicParsing="false" onAction="#exitApp" styleClass="Button" text="Button" />
+      <Label layoutX="225.0" layoutY="124.0" prefHeight="59.0" prefWidth="144.0" text="Label" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="124.0" />
+      <Label alignment="CENTER" layoutX="86.0" layoutY="35.0" prefHeight="59.0" prefWidth="437.0" styleClass="finishLabel" text="Label" wrapText="true" AnchorPane.bottomAnchor="306.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="35.0" />
+      <Label alignment="CENTER" layoutX="220.0" layoutY="213.0" prefHeight="51.0" prefWidth="144.0" styleClass="finishLabel" text="Label" wrapText="true" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
    </children>
 </AnchorPane>

@@ -1,0 +1,127 @@
+.startBackground {
+    -fx-background-image: url("/images/space4.jpg");
+    -fx-background-position: center;
+    -fx-background-size: 575 500;
+}
+
+.gameBackground {
+    -fx-background-image: url("/images/space3.jpg");
+    -fx-background-position: center;
+    -fx-background-size: 575 500;
+}
+
+.finishBackground {
+
+    -fx-background-image: url("/images/space.jpg");
+    -fx-background-position: center;
+    -fx-background-size: 650 575;
+}
+
+.Button {
+    -fx-background-color: #C0C001,
+    linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+    linear-gradient(#20262b, #191d22),
+    radial-gradient(center 50% 0%, radius 100%, rgba(114, 131, 148, 0.9), rgba(255, 255, 255, 0));
+    -fx-background-radius: 5, 4, 3, 5;
+    -fx-background-insets: 0, 1, 2, 0;
+    -fx-text-fill: gold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+    -fx-font-family: "Arial";
+    /* -fx-text-fill: linear-gradient(white, #d0d0d0); */
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+}
+
+#startLabelText {
+    -fxfont-family: "Chango", cursive;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C0C001;
+    -fx-background-radius: 30;
+}
+
+.finishLabel {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C0C001;
+
+
+}
+
+.Answers {
+    -fx-text-size: 15px;
+    -fx-text-weight: bold;
+}
+
+/*silver color button ! ! ! !*/
+.next {
+    -fx-background-color: #C0C001,
+    linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+    linear-gradient(#20262b, #191d22),
+    radial-gradient(center 50% 0%, radius 100%, rgba(114, 131, 148, 0.9), rgba(255, 255, 255, 0));
+
+    -fx-background-color: #c3c4c4,
+    linear-gradient(#d6d6d6 50%, white 100%),
+    radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230, 230, 230, 0) 50%);
+    -fx-background-radius: 20;
+    -fx-background-insets: 0, 1, 1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 3, 0.0, 0, 1);
+}
+
+#statusLabel {
+    -fx-font-family: "Chango", cursive;
+    -fx-text-fill: #C0C001,
+    linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+    linear-gradient(#20262b, #191d22),
+    radial-gradient(center 50% 0%, radius 100%, rgba(114, 131, 148, 0.9), rgba(255, 255, 255, 0));
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+}
+
+#questionLabel {
+    -fx-background-color: #c3c4c4,
+    linear-gradient(#d6d6d6 50%, white 100%),
+    radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230, 230, 230, 0) 50%);
+    -fx-background-radius: 20;
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+
+}
+
+#labelBackground {
+    -fx-background-color: #c3c4c4,
+    linear-gradient(#d6d6d6 50%, white 100%),
+    radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230, 230, 230, 0) 50%);
+
+}
+
+#pane {
+
+    -fx-background-color: #ecebe9,
+    rgba(0, 0, 0, 0.05),
+    linear-gradient(#dcca8a, #c7a740),
+    linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),
+    linear-gradient(#f6ebbe, #e6c34d);
+    -fx-background-radius: 20;
+    -fx-font-family: "Lato", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

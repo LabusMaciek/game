@@ -1,5 +1,6 @@
 package com.lobuz.game.controller.start;
 
+import com.lobuz.game.config.ApplicationProperties;
 import com.lobuz.game.config.FxmlView;
 import com.lobuz.game.config.StageManager;
 import com.lobuz.game.dto.entity.QuestionModel;
@@ -22,11 +23,12 @@ import java.util.ResourceBundle;
 @Controller
 public class StartController implements Initializable {
 
-    private final GameProperties properties;
+    private final ApplicationProperties properties;
     private final QuestionServiceImpl service;
     private final StageManager stageManager;
 
-    public StartController(GameProperties properties, QuestionServiceImpl service, @Lazy StageManager stageManager) {
+    public StartController(ApplicationProperties properties, QuestionServiceImpl service,
+                           @Lazy StageManager stageManager) {
         this.properties = properties;
         this.service = service;
         this.stageManager = stageManager;
@@ -40,9 +42,8 @@ public class StartController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        startLabel.setText("space quiz");
-        startButton.setText("start game");
-        startLabel.setWrapText(true);
+        startLabel.setText(properties.getWelcomeLabel());
+        startButton.setText(properties.getStartButton());
     }
 
     public void handle(ActionEvent event) {
