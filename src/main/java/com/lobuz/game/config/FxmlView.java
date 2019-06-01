@@ -3,16 +3,18 @@ package com.lobuz.game.config;
 public enum FxmlView {
     START {
         public String getTitle() {
-            return "bangla";
+            return "quiz by lobuz";
         }
+
         public String getFxmlFile() {
             return "/view/start.fxml";
         }
     },
     GAME {
         public String getTitle() {
-            return "bangla";
+            return "quiz by lobuz";
         }
+
         public String getFxmlFile() {
             return "/view/game.fxml";
         }
@@ -20,8 +22,9 @@ public enum FxmlView {
     },
     FINISH {
         public String getTitle() {
-            return "bangla";
+            return "quiz by lobuz";
         }
+
         public String getFxmlFile() {
             return "/view/finish.fxml";
         }

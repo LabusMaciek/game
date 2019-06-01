@@ -1,18 +1,14 @@
 package com.lobuz.game.config;
 
-import java.io.IOException;
-import java.util.List;
-
 import com.lobuz.game.dto.entity.QuestionModel;
 import com.lobuz.game.dto.service.QuestionService;
-import lombok.extern.slf4j.Slf4j;
+import javafx.stage.Stage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
-import javafx.stage.Stage;
+import java.util.List;
 
-@Slf4j
 @Configuration
 public class ConfigClass {
 

@@ -1,13 +1,12 @@
-package com.lobuz.game.dto.entity;
+package com.lobuz.game.dto.ranking.model;
 
+import com.lobuz.game.dto.entity.QuestionModel;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Slf4j
 @Getter
 @Setter
 @Service
@@ -24,7 +23,6 @@ public class Points {
     public void calculatePoints(String answer, int num) {
         if (answer.equals(questions.get(num).getAnswerD())) {
             points++;
-            log.info("points" + points);
         }
     }
 }

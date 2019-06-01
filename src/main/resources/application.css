@@ -33,12 +33,20 @@
     -fx-padding: 10 20 10 20;
 }
 
-#startLabelText {
-    -fxfont-family: "Chango", cursive;
-    -fx-font-size: 30px;
+.ButtonFinish {
+    -fx-background-color: #C0C001,
+    linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+    linear-gradient(#20262b, #191d22),
+    radial-gradient(center 50% 0%, radius 100%, rgba(114, 131, 148, 0.9), rgba(255, 255, 255, 0));
+    -fx-background-radius: 5, 4, 3, 5;
+    -fx-background-insets: 0, 1, 2, 0;
+    -fx-text-fill: gold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+    -fx-font-family: "Arial";
+    /* -fx-text-fill: linear-gradient(white, #d0d0d0); */
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
-    -fx-text-fill: #C0C001;
-    -fx-background-radius: 30;
+    -fx-padding: 10 20 10 20;
 }
 
 .finishLabel {
@@ -54,8 +62,7 @@
     -fx-text-weight: bold;
 }
 
-
-#statusLabel {
+.statusLabel {
     -fx-font-family: "Chango", cursive;
     -fx-text-fill: #C0C001,
     linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
@@ -64,6 +71,20 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
     -fx-font-size: 60px;
     -fx-font-weight: bold;
+}
+
+.input {
+    -fx-text-fill: black;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+#startLabelText {
+    -fxfont-family: "Chango", cursive;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C0C001;
+    -fx-background-radius: 30;
 }
 
 #questionLabel {
@@ -86,7 +107,6 @@
 }
 
 #pane {
-
     -fx-background-color: #ecebe9,
     rgba(0, 0, 0, 0.05),
     linear-gradient(#dcca8a, #c7a740),

@@ -8,6 +8,7 @@ game:
     firstScenePath:  /view/start/start.fxml
     secondScenePath: /view/game/game.fxml
     thirdScenePath: /view/finish/finish.fxml
+    rankingPath: /home/lobuz/IdeaProjects/game/game/src/main/resources/ranking/ranking.json
   view:
     welcomeLabel: Sprawdzian wiedzy o kosmosie
     startButton: START

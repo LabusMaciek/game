@@ -6,9 +6,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="575.0" styleClass="finishBackground" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lobuz.game.controller.finish.FinishController">
    <children>
-      <Button fx:id="replay" layoutX="221.0" layoutY="398.0" mnemonicParsing="false" onAction="#playAgain" prefHeight="60.0" prefWidth="347.0" styleClass="Button" text="Zagraj ponownie" />
-      <Button fx:id="exit" layoutX="43.0" layoutY="398.0" mnemonicParsing="false" onAction="#exitApp" styleClass="Button" text="Wyjście" />
-      <Label fx:id="score" alignment="CENTER" layoutX="206.0" layoutY="209.0" prefHeight="59.0" prefWidth="144.0" text="Label" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="209.0" />
+      <Button fx:id="replay" layoutX="259.0" layoutY="386.0" mnemonicParsing="false" onAction="#playAgain" prefHeight="26.0" prefWidth="238.0" styleClass="ButtonFinish" text="Zagraj ponownie" />
+      <Button fx:id="exit" layoutX="104.0" layoutY="386.0" mnemonicParsing="false" onAction="#exitApp" styleClass="ButtonFinish" text="Wyjście" />
+      <Label fx:id="score" alignment="CENTER" layoutX="147.0" layoutY="221.0" prefHeight="59.0" prefWidth="144.0" styleClass="statusLabel" text="Label" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="221.0" />
       <Label alignment="CENTER" layoutX="80.0" layoutY="70.0" prefHeight="125.0" prefWidth="415.0" styleClass="finishLabel" text="Twój wynik to:" wrapText="true" AnchorPane.bottomAnchor="305.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="70.0" />
       <Label alignment="CENTER" layoutX="116.0" layoutY="299.0" prefHeight="51.0" prefWidth="322.0" styleClass="finishLabel" text="Gratuluję!" wrapText="true" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="137.0" />
    </children>

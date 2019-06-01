@@ -50,7 +50,7 @@ public class StageManager {
         try {
             primaryStage.show();
         } catch (Exception e) {
-            System.out.println("Unable to show scene for title");
+            log.error("Unable to show scene for title");
         }
     }
 
