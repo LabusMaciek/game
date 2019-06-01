@@ -54,21 +54,6 @@
     -fx-text-weight: bold;
 }
 
-/*silver color button ! ! ! !*/
-.next {
-    -fx-background-color: #C0C001,
-    linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
-    linear-gradient(#20262b, #191d22),
-    radial-gradient(center 50% 0%, radius 100%, rgba(114, 131, 148, 0.9), rgba(255, 255, 255, 0));
-
-    -fx-background-color: #c3c4c4,
-    linear-gradient(#d6d6d6 50%, white 100%),
-    radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230, 230, 230, 0) 50%);
-    -fx-background-radius: 20;
-    -fx-background-insets: 0, 1, 1;
-    -fx-text-fill: black;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 3, 0.0, 0, 1);
-}
 
 #statusLabel {
     -fx-font-family: "Chango", cursive;

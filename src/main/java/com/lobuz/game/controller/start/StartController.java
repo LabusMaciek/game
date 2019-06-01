@@ -35,9 +35,9 @@ public class StartController implements Initializable {
     }
 
     @FXML
-    public Button startButton;
+    private Button startButton;
     @FXML
-    public Label startLabel;
+    private Label startLabel;
 
 
     @Override

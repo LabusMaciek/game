@@ -26,7 +26,7 @@ public class ConfigClass {
 
     @Bean
     @Lazy
-    public StageManager stageManager(Stage stage) throws IOException {
+    public StageManager stageManager(Stage stage) {
         return new StageManager(springFXMLLoader, stage);
     }
 
