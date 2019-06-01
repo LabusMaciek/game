@@ -31,7 +31,7 @@ public class GameApplication extends Application {
     @Override
     public void start(Stage primaryStage) {
         stageManager = context.getBean(StageManager.class, primaryStage);
-        stageManager.switchScene(FxmlView.LOGIN);
+        stageManager.switchScene(FxmlView.START);
     }
 
     @Override

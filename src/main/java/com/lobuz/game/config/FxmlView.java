@@ -1,14 +1,31 @@
 package com.lobuz.game.config;
 
 public enum FxmlView {
-    LOGIN {
+    START {
         public String getTitle() {
             return "bangla";
         }
-
         public String getFxmlFile() {
-            return "/view/start/start.fxml";
+            return "/view/start.fxml";
         }
+    },
+    GAME {
+        public String getTitle() {
+            return "bangla";
+        }
+        public String getFxmlFile() {
+            return "/view/game.fxml";
+        }
+
+    },
+    FINISH {
+        public String getTitle() {
+            return "bangla";
+        }
+        public String getFxmlFile() {
+            return "/view/finish.fxml";
+        }
+
     };
 
     public abstract String getTitle();

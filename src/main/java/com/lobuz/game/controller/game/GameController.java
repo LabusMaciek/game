@@ -1,23 +1,44 @@
 package com.lobuz.game.controller.game;
 
-import org.springframework.stereotype.Controller;
-
+import com.lobuz.game.config.FxmlView;
+import com.lobuz.game.config.StageManager;
+import com.lobuz.game.dto.entity.Points;
+import com.lobuz.game.dto.entity.QuestionModel;
+import com.lobuz.game.dto.service.QuestionService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Controller;
+
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
 
 @Slf4j
 @Controller
-public class GameController {
+public class GameController implements Initializable {
 
-    private static int num = 0;
+    private final StageManager stageManager;
+    private static int questionNumber = 0;
+    private final QuestionService service;
+    private final Points points;
+
+
+    private final List<QuestionModel> questionList;
+
+    public GameController(@Lazy StageManager stageManager, QuestionService service,
+                          List<QuestionModel> questionList, Points points) {
+        this.stageManager = stageManager;
+        this.service = service;
+        this.questionList = questionList;
+        this.points = points;
+
+    }
+
     @FXML
     private Label questionField;
     @FXML
@@ -35,22 +56,35 @@ public class GameController {
 
     @FXML
     public void next(ActionEvent event) {
-        num++;
-        log.info("num: " + num);
-        if (num > 2) {
-            log.info("dziala przewijanie");
-            try {
-                Parent root = FXMLLoader.load(getClass().getResource("/view/finish/finish.fxml"));
-                Scene scene = new Scene(root);
-                Stage gameStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                gameStage.setScene(scene);
-                gameStage.show();
 
-            } catch (Exception e) {
-                log.error("Error during switch scene, ", e);
-            }
-
+        if (questionNumber > 9) {
+            nextStage();
         }
+        setQuestion(++questionNumber);
+    }
+
+
+    @FXML
+    public void checkAnswer(ActionEvent event) {
+        String answer = ((Button) event.getSource()).getText();
+        points.calculatePoints(answer, questionNumber);
+    }
+
+
+    private void setQuestion(int num) {
+        questionField.setText(questionList.get(num).getQuestion());
+        answerA.setText(questionList.get(num).getAnswerA());
+        answerB.setText(questionList.get(num).getAnswerB());
+        answerC.setText(questionList.get(num).getAnswerC());
+        answerD.setText(questionList.get(num).getAnswerD());
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setQuestion(questionNumber);
+    }
+
+    private void nextStage() {
+        stageManager.switchScene(FxmlView.FINISH);
     }
 }
-
